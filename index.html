@@ -66,7 +66,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 2
+    		总文章数 3
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -152,6 +152,103 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="code_share-Python大学计算机课后作业" class="article article-type-code_share  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/09/Python%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/">Python大学计算机课后作业</a>
+    </h1>
+  
+
+        
+        <a href="/2022/05/09/Python%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/" class="archive-article-date">
+  	<time datetime="2022-05-09T14:35:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="文章目的"><a href="#文章目的" class="headerlink" title="文章目的"></a>文章目的</h1><p>为了节省大家抄书的时间<br>我把代码放在这里提供参考</p>
+<h2 id="文件写入与读出"><a href="#文件写入与读出" class="headerlink" title="文件写入与读出"></a>文件写入与读出</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">f = open(&quot;name.txt&quot;,&quot;w+&quot;)</span><br><span class="line">print(&quot;文件名为:&quot;,f.name)</span><br><span class="line">number,name,class1=input(&quot;请输入学号，姓名，班级:&quot;).split(&#x27;,&#x27;)</span><br><span class="line">f.write( number + &#x27;\n&#x27; )</span><br><span class="line">f.write( name + &#x27;\n&#x27; )</span><br><span class="line">f.write( class1 )</span><br><span class="line">f.seek(0)</span><br><span class="line">print( f.read() )</span><br><span class="line">print(&quot;welcome &quot;,class1,&#x27;\&#x27;s&#x27;,number,&#x27;：&#x27;,name )</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="七彩圆圈"><a href="#七彩圆圈" class="headerlink" title="七彩圆圈"></a>七彩圆圈</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from turtle import *</span><br><span class="line">import time</span><br><span class="line">def color_7circle(): # 七彩圆圈</span><br><span class="line">	colors=[&quot;red&quot;,&quot;orange&quot;,&quot;yellow&quot;,&quot;green&quot;,&quot;cyan&quot;,&quot;blue&quot;,&quot;purple&quot;]</span><br><span class="line">	for i in range(7):</span><br><span class="line">		c=colors[i]</span><br><span class="line">		pensize(4)</span><br><span class="line">		color(&quot;black&quot;,c)</span><br><span class="line">		begin_fill()</span><br><span class="line">		left(360/7)</span><br><span class="line">		circle(100)</span><br><span class="line">		end_fill()</span><br><span class="line">	done()</span><br><span class="line">color_7circle()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="正六边形"><a href="#正六边形" class="headerlink" title="正六边形"></a>正六边形</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">from turtle import *</span><br><span class="line">import time</span><br><span class="line">def Regular_hexagon(): #六边形</span><br><span class="line">	penup()</span><br><span class="line">	goto(0,150)</span><br><span class="line">	pendown()</span><br><span class="line">	colormode(255) #开启RGB模式</span><br><span class="line">	pensize(10)</span><br><span class="line">	pencolor(255,0,0) #画笔红</span><br><span class="line">	fillcolor(255,255,0) #填充黄</span><br><span class="line"></span><br><span class="line">	begin_fill()</span><br><span class="line">	for i in range(6):</span><br><span class="line">		forward(200)</span><br><span class="line">		right(60)</span><br><span class="line">	end_fill()</span><br><span class="line">	time.sleep(0.5)</span><br><span class="line"></span><br><span class="line">	penup()</span><br><span class="line">	goto(-300,-120)</span><br><span class="line">	color(128,15,128)</span><br><span class="line">	write(&quot;正六边形&quot;,font=(&quot;宋体&quot;,28,&quot;normal&quot;))</span><br><span class="line">	goto(-270,-160)</span><br><span class="line">	write(&quot;By sensho&quot;,font=(&quot;宋体&quot;,20,&quot;normal&quot;))</span><br><span class="line">    done()</span><br><span class="line">Regular_hexagon()</span><br></pre></td></tr></table></figure>
+
+<h2 id="By-2022-x2F-5-x2F-9-23-01"><a href="#By-2022-x2F-5-x2F-9-23-01" class="headerlink" title="By 2022&#x2F;5&#x2F;9 23:01"></a>By 2022&#x2F;5&#x2F;9 23:01</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">大学计算机</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/code//" class="article-tag-list-link color5">code</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/code/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/09/Python%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-My-frist-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -385,6 +482,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">大学计算机</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -439,7 +540,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
           
             <li class="search-li">
-              <a href="https://tofu2333.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>tofu</a>
+              <a href="https://tofu2333.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>TOFU</a>
             </li>
           
             <li class="search-li">
